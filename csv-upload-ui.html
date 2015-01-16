@@ -4,16 +4,23 @@
 
 <body>
     <h1>Welcome to Meteor!</h1>
+    <div class="container">
+        {{> upload}}
 
-    {{> upload}}
-
-    {{> display }}
+        {{> display }}
+    </div>
 </body>
 
 <template name="upload">
+    <input type="file" name="file" id="file" />
 
 </template>
 
 <template name="display">
-
+    {{# each items }}
+    <div class="panel panel-default">
+        <p>Name: {{ name }}</p>
+        <p>Location: {{ location }}</p>
+    </div>
+    {{/ each }}
 </template>
