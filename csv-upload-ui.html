@@ -4,11 +4,9 @@
 
 <body>
     <h1>Welcome to Meteor!</h1>
-    <div class="container">
         {{> upload}}
-
+        <hr>
         {{> display }}
-    </div>
 </body>
 
 <template name="upload">
@@ -18,9 +16,14 @@
 
 <template name="display">
     {{# each items }}
-    <div class="panel panel-default">
-        <p>Name: {{ name }}</p>
-        <p>Location: {{ location }}</p>
+    <div class="item">
+        {{> item }}
     </div>
     {{/ each }}
+</template>
+
+<template name="item">
+     {{# each itemKeyValue }}
+       <p>{{ key }}: {{ value }}</p>
+        {{/ each }}
 </template>
