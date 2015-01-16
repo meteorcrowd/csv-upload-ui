@@ -1,4 +1,10 @@
 /* CSS declarations go here */
 .item {
-    border: 1px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: 0.3em;
+    box-shadow: 0.1em 0.1em 0em rgba(222,222,222,0.3);
+}
 }
